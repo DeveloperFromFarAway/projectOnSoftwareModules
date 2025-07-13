@@ -1,0 +1,21 @@
+﻿<Window x:Class="PR3.Captha"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR3"
+        mc:Ignorable="d"
+        Title="Captha" Height="212" Width="249" WindowStyle="None">
+    <Grid Background="#FF303030" Margin="0,0,0,-6">
+        <DockPanel LastChildFill="False" VerticalAlignment="Top" Background="#FF3C2C62" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown" Height="35">
+            <Label x:Name="lbExit" Content="X" MouseDown="ldExit_MouseDown" FontWeight="Bold" FontSize="20" DockPanel.Dock="Right" Width="37"/>
+            <Image DockPanel.Dock="Left" Width="55" Source="/Redas.png"/>
+            <Label Content="Проверка" FontWeight="Bold" FontSize="20" Width="110"/>
+        </DockPanel>
+        <Label x:Name="lbCod" Content="Да" Margin="52,47,0,0" Width="130"/>
+        <TextBox x:Name="tbCod" HorizontalAlignment="Left" Margin="10,110,0,0" Text="" Width="172"/>
+        <Label Content="Код:" Margin="10,47,0,0"/>
+        <Label Content="Введите код в поле ниже" Margin="10,81,0,0"/>
+        <Button Content="Подтвердить" HorizontalAlignment="Left" Margin="10,142,0,0" Click="Confirmation_Click"/>
+    </Grid>
+</Window>

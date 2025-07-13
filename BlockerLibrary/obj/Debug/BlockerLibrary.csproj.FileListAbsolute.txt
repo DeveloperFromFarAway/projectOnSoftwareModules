@@ -1,0 +1,6 @@
+C:\Users\PC\Desktop\Програмные модули\BlockerLibrary\bin\Debug\BlockerLibrary.dll
+C:\Users\PC\Desktop\Програмные модули\BlockerLibrary\bin\Debug\BlockerLibrary.pdb
+C:\Users\PC\Desktop\Програмные модули\BlockerLibrary\obj\Debug\BlockerLibrary.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Програмные модули\BlockerLibrary\obj\Debug\BlockerLibrary.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Програмные модули\BlockerLibrary\obj\Debug\BlockerLibrary.dll
+C:\Users\PC\Desktop\Програмные модули\BlockerLibrary\obj\Debug\BlockerLibrary.pdb

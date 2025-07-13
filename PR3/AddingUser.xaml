@@ -1,0 +1,118 @@
+﻿<Window x:Class="PR3.AddingUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR3"
+        mc:Ignorable="d"
+        Title="UserWindow" Height="635" Width="610"
+    ResizeMode="NoResize" WindowStyle="None"
+        Loaded="Window_Loaded">
+    <Grid Background="#FF2F2E2E">
+        <DockPanel LastChildFill="False" VerticalAlignment="Top" Background="#FF3C2C62" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown" Height="35">
+            <Label x:Name="lbExit" Content="X" Foreground="#FFD9D8D8" MouseDown="ldExit_MouseDown" FontWeight="Bold" FontSize="20" DockPanel.Dock="Right" Width="37"/>
+            <Image DockPanel.Dock="Left" Source="/Redas.png" Width="55"/>
+            <Label Content="Добавление пользователя" Foreground="#FFD9D8D8" FontWeight="Bold" FontSize="20" Width="275"/>
+        </DockPanel>
+
+        <Grid Margin="0,35,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Margin="10" Grid.Column="0">
+                <GroupBox Header="Основная информация" Margin="0,5">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <Label Content="ФИО" Width="200" VerticalAlignment="Center"/>
+                            <TextBox x:Name="tbFullName" Width="200" Height="25"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <Label Content="Контактная информация" Width="200" VerticalAlignment="Center"/>
+                            <TextBox x:Name="tbContactInfo" Width="200" Height="25"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <Label Content="Дата найма" Width="200" VerticalAlignment="Center"/>
+                            <TextBox x:Name="tbHireDate" Width="200" Height="25"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <Label Content="Роль" Width="200" VerticalAlignment="Center"/>
+                            <ComboBox x:Name="cbRole" Width="200" Height="25"/>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+                
+                <GroupBox Header="Данные для входа" Margin="0,10,0,5">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <Label Content="Логин" Width="200" VerticalAlignment="Center"/>
+                            <TextBox x:Name="tbLogin" Width="200" Height="25"/>
+                        </StackPanel>
+
+                        <StackPanel x:Name="spPassword" Orientation="Horizontal" Margin="0,5">
+                            <Label Content="Пароль" Width="200" VerticalAlignment="Center"/>
+                            <TextBox x:Name="tbPassword" Width="200" Height="25"/>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+                
+                <GroupBox Header="Данные для трудового договора" Margin="0,10,0,5">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <Label Content="Адрес работы" Width="200" VerticalAlignment="Center"/>
+                            <TextBox x:Name="tbWorkAddress" Width="200" Height="25" 
+                                        Text="г. Москва, ул. Ленина, д. 42"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <Label Content="Испытательный срок (мес)" Width="200" VerticalAlignment="Center"/>
+                            <ComboBox x:Name="cbProbationPeriod" Width="200" Height="25" SelectedIndex="2">
+                                <ComboBoxItem Content="1 месяц"/>
+                                <ComboBoxItem Content="2 месяца"/>
+                                <ComboBoxItem Content="3 месяца"/>
+                                <ComboBoxItem Content="Без испытательного срока"/>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <Label Content="Паспортные данные" Width="200" VerticalAlignment="Center"/>
+                            <TextBox x:Name="tbPassportData" Width="200" Height="25"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <Label Content="ИНН" Width="200" VerticalAlignment="Center"/>
+                            <TextBox x:Name="tbINN" Width="200" Height="25"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <Label Content="СНИЛС" Width="200" VerticalAlignment="Center"/>
+                            <TextBox x:Name="tbSNILS" Width="200" Height="25"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="0,5">
+                            <Label Content="Налоговые льготы" Width="200" VerticalAlignment="Center"/>
+                            <CheckBox x:Name="cbTaxExemption" Width="200" Height="25"/>
+                        </StackPanel>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
+                <Image x:Name="imgPhoto" Width="150" Height="150" Source="/user.jpg" 
+                        VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Button x:Name="btnUploadPhoto" Content="Добавить фото" Margin="0,10,0,0" 
+                        Click="btnUploadPhoto_Click" Width="150"/>
+                <Button x:Name="btnSave" Content="Сохранить" Margin="0,10,0,0" 
+                        Click="btnSave_Click" Width="150"/>
+                <Button x:Name="btnClear" Content="Очистить" Margin="0,10,0,0" 
+                        Click="btnClear_Click" Width="150"/>
+                <Button x:Name="btnDogovor" Content="Составить договор" Margin="0,10,0,0" 
+                        Click="btnGenerateContract_Click" Width="150"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

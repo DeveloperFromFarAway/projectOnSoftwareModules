@@ -1,0 +1,70 @@
+C:\Users\PC\Desktop\PR3\bin\Debug\PR3.exe.config
+C:\Users\PC\Desktop\PR3\bin\Debug\PR3.exe
+C:\Users\PC\Desktop\PR3\bin\Debug\PR3.pdb
+C:\Users\PC\Desktop\PR3\obj\Debug\PR3.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\PR3\obj\Debug\MainWindow.g.cs
+C:\Users\PC\Desktop\PR3\obj\Debug\App.g.cs
+C:\Users\PC\Desktop\PR3\obj\Debug\PR3_MarkupCompile.cache
+C:\Users\PC\Desktop\PR3\obj\Debug\PR3_MarkupCompile.lref
+C:\Users\PC\Desktop\PR3\obj\Debug\MainWindow.baml
+C:\Users\PC\Desktop\PR3\obj\Debug\PR3.g.resources
+C:\Users\PC\Desktop\PR3\obj\Debug\PR3.Properties.Resources.resources
+C:\Users\PC\Desktop\PR3\obj\Debug\PR3.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\PR3\obj\Debug\PR3.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\PR3\obj\Debug\PR3.exe
+C:\Users\PC\Desktop\PR3\obj\Debug\PR3.pdb
+C:\Users\PC\Desktop\PR3\obj\Debug\UserWindow.g.cs
+C:\Users\PC\Desktop\PR3\obj\Debug\UserWindow.baml
+C:\Users\PC\Desktop\PR3\obj\Debug\RegistrationWindow.g.cs
+C:\Users\PC\Desktop\PR3\obj\Debug\RegistrationWindow.baml
+C:\Users\PC\Desktop\PR3\obj\Debug\GuestWindow.g.cs
+C:\Users\PC\Desktop\PR3\obj\Debug\GuestWindow.baml
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\PR3.exe.config
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\PR3.exe
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\PR3.pdb
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\EntityFramework.dll
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\EntityFramework.xml
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\PR3.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\GuestWindow.g.cs
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\MainWindow.g.cs
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\RegistrationWindow.g.cs
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\UserWindow.g.cs
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\App.g.cs
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\PR3_Content.g.cs
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\PR3_MarkupCompile.cache
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\PR3_MarkupCompile.lref
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\GuestWindow.baml
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\MainWindow.baml
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\RegistrationWindow.baml
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\UserWindow.baml
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\PR3.g.resources
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\PR3.Properties.Resources.resources
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\PR3.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\PR3.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\PR3.csproj.Up2Date
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\PR3.exe
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\PR3.pdb
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\ClassLibrary1.dll
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\ClassLibrary1.pdb
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\App.baml
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\Captha.g.cs
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\Captha.baml
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\BlockerLibrary.dll
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\BlockerLibrary.pdb
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\TimeCheckLibrary.dll
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\TimeCheckLibrary.pdb
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\EmployeeWindow.g.cs
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\EmployeeWindow.baml
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\AddingUser.g.cs
+C:\Users\PC\Desktop\Програмные модули\PR3\obj\Debug\AddingUser.baml
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\itextsharp.dll
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\itextsharp.xml
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\Xceed.Document.NET.dll
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\Xceed.Drawing.NET.dll
+C:\Users\PC\Desktop\Програмные модули\PR3\bin\Debug\Xceed.Words.NET.dll

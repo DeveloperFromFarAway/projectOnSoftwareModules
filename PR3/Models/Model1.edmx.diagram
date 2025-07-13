@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c54f7b2aac5f45498e759d69fd5451c6" Name="Diagram1">
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_Account" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_AlarmTriggers" Width="1.5" PointX="10.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_Clients" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_EmployeeAssignments" Width="1.5" PointX="12.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_Employees" Width="2" PointX="3" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_IMGRoomPlan" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_InspectionActs" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_Position" Width="1.5" PointX="1.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_ResponsiblePersons" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_SecurityContracts" Width="1.5" PointX="6" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_SecurityObjects" Width="1.5" PointX="0.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_Sensors" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DepartmentOfPrivateSecurityModel.Table_SensorsType" Width="1.5" PointX="6" PointY="1.875" IsExpanded="true" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_Account_Table_Position" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_Employees_Table_Account" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_AlarmTriggers_Table_Sensors" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_EmployeeAssignments_Table_AlarmTriggers" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_InspectionActs_Table_AlarmTriggers" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_ResponsiblePersons_Table_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_SecurityContracts_Table_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_SecurityObjects_Table_Clients" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_EmployeeAssignments_Table_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_Employees_Table_Position" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_InspectionActs_Table_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_SecurityContracts_Table_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_SecurityObjects_Table_IMGRoomPlan" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_InspectionActs_Table_SecurityObjects" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_SecurityContracts_Table_SecurityObjects" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_Sensors_Table_SecurityObjects" ManuallyRouted="false" />
+        <AssociationConnector Association="DepartmentOfPrivateSecurityModel.FK_Table_Sensors_Table_SensorsType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

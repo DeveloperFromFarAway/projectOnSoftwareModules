@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище DepartmentOfPrivateSecurityModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Table_Account">
+    <Key>
+      <PropertyRef Name="ID_Account" />
+    </Key>
+    <Property Name="ID_Account" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_Position" Type="int" />
+    <Property Name="Login" Type="varchar" MaxLength="255" />
+    <Property Name="Password" Type="varchar" MaxLength="255" />
+    <Property Name="Permission" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_AlarmTriggers">
+    <Key>
+      <PropertyRef Name="ID_AlarmTriggers" />
+    </Key>
+    <Property Name="ID_AlarmTriggers" Type="int" Nullable="false" />
+    <Property Name="ID_InspectionActs" Type="int" />
+    <Property Name="ID_Sensors" Type="int" Nullable="false" />
+    <Property Name="Timestamp" Type="datetime" Nullable="false" />
+    <Property Name="IsFalsealarm" Type="bit" Nullable="false" />
+    <Property Name="Responsetime" Type="datetime" Nullable="false" />
+    <Property Name="PatrolArrivalTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_Clients">
+    <Key>
+      <PropertyRef Name="ID_Clients" />
+    </Key>
+    <Property Name="ID_Clients" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ContactInfo" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="RegistrationDate" Type="datetime" Nullable="false" />
+    <Property Name="Contractcount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_EmployeeAssignments">
+    <Key>
+      <PropertyRef Name="ID_EmployeeAssignments" />
+    </Key>
+    <Property Name="ID_EmployeeAssignments" Type="int" Nullable="false" />
+    <Property Name="ID_Employees" Type="int" Nullable="false" />
+    <Property Name="ID_AlarmTriggers" Type="int" Nullable="false" />
+    <Property Name="Taskstatus" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Feedback" Type="text" />
+    <Property Name="IsResolved" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_Employees">
+    <Key>
+      <PropertyRef Name="ID_Employees" />
+    </Key>
+    <Property Name="ID_Employees" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_Position" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ContactInfo" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="HireDate" Type="datetime" Nullable="false" />
+    <Property Name="Isonduty" Type="bit" Nullable="false" />
+    <Property Name="PatrolledObjectsCount" Type="int" Nullable="false" />
+    <Property Name="ID_Account" Type="int" />
+    <Property Name="WorkAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="ProbationPeriod" Type="int" />
+    <Property Name="ContractNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="PassportData" Type="nvarchar" MaxLength="255" />
+    <Property Name="INN" Type="nvarchar" MaxLength="20" />
+    <Property Name="SNILS" Type="nvarchar" MaxLength="14" />
+    <Property Name="TaxExemption" Type="bit" />
+    <Property Name="AdditionalTerms" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Table_IMGRoomPlan">
+    <Key>
+      <PropertyRef Name="ID_IMG_Room_Plan" />
+    </Key>
+    <Property Name="ID_IMG_Room_Plan" Type="int" Nullable="false" />
+    <Property Name="image_code" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_InspectionActs">
+    <Key>
+      <PropertyRef Name="ID_InspectionActs" />
+    </Key>
+    <Property Name="ID_InspectionActs" Type="int" Nullable="false" />
+    <Property Name="ID_AlarmTriggers" Type="int" />
+    <Property Name="ID_SecurityObjects" Type="int" Nullable="false" />
+    <Property Name="ID_Inspector_Employee" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Findings" Type="text" Nullable="false" />
+    <Property Name="Inspectionresult" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="iscriminalcaseinitiated" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_Position">
+    <Key>
+      <PropertyRef Name="ID_Position" />
+    </Key>
+    <Property Name="ID_Position" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Table_ResponsiblePersons">
+    <Key>
+      <PropertyRef Name="ID_ResponsiblePersons" />
+    </Key>
+    <Property Name="ID_ResponsiblePersons" Type="int" Nullable="false" />
+    <Property Name="ID_Clients" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Surname" Type="varchar" MaxLength="100" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Table_SecurityContracts">
+    <Key>
+      <PropertyRef Name="ID_SecurityContracts" />
+    </Key>
+    <Property Name="ID_SecurityContracts" Type="int" Nullable="false" />
+    <Property Name="ID_SecurityObjects" Type="int" Nullable="false" />
+    <Property Name="ID_Clients" Type="int" Nullable="false" />
+    <Property Name="ID_Responsible_Employee" Type="int" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="false" />
+    <Property Name="Terms" Type="text" Nullable="false" />
+    <Property Name="Contractstatus" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fee" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_SecurityObjects">
+    <Key>
+      <PropertyRef Name="ID_SecurityObjects" />
+    </Key>
+    <Property Name="ID_SecurityObjects" Type="int" Nullable="false" />
+    <Property Name="ID_Clients" Type="int" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ID_IMG_Room_Plan" Type="int" Nullable="false" />
+    <Property Name="ResponsiblePersons" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_Sensors">
+    <Key>
+      <PropertyRef Name="ID_Sensors" />
+    </Key>
+    <Property Name="ID_Sensors" Type="int" Nullable="false" />
+    <Property Name="ID_SecurityObjects" Type="int" Nullable="false" />
+    <Property Name="ID_SensorsType" Type="int" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="InstallationDate" Type="datetime" Nullable="false" />
+    <Property Name="LastMaintenance" Type="datetime" Nullable="false" />
+    <Property Name="IsFunctional" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Table_SensorsType">
+    <Key>
+      <PropertyRef Name="ID_SensorsType" />
+    </Key>
+    <Property Name="ID_SensorsType" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Table_Account_Table_Position">
+    <End Role="Table_Position" Type="Self.Table_Position" Multiplicity="0..1" />
+    <End Role="Table_Account" Type="Self.Table_Account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_Position">
+        <PropertyRef Name="ID_Position" />
+      </Principal>
+      <Dependent Role="Table_Account">
+        <PropertyRef Name="ID_Position" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_AlarmTriggers_Table_Sensors">
+    <End Role="Table_Sensors" Type="Self.Table_Sensors" Multiplicity="1" />
+    <End Role="Table_AlarmTriggers" Type="Self.Table_AlarmTriggers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_Sensors">
+        <PropertyRef Name="ID_Sensors" />
+      </Principal>
+      <Dependent Role="Table_AlarmTriggers">
+        <PropertyRef Name="ID_Sensors" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_EmployeeAssignments_Table_AlarmTriggers">
+    <End Role="Table_AlarmTriggers" Type="Self.Table_AlarmTriggers" Multiplicity="1" />
+    <End Role="Table_EmployeeAssignments" Type="Self.Table_EmployeeAssignments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_AlarmTriggers">
+        <PropertyRef Name="ID_AlarmTriggers" />
+      </Principal>
+      <Dependent Role="Table_EmployeeAssignments">
+        <PropertyRef Name="ID_AlarmTriggers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_EmployeeAssignments_Table_Employees">
+    <End Role="Table_Employees" Type="Self.Table_Employees" Multiplicity="1" />
+    <End Role="Table_EmployeeAssignments" Type="Self.Table_EmployeeAssignments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_Employees">
+        <PropertyRef Name="ID_Employees" />
+      </Principal>
+      <Dependent Role="Table_EmployeeAssignments">
+        <PropertyRef Name="ID_Employees" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_Employees_Table_Account">
+    <End Role="Table_Account" Type="Self.Table_Account" Multiplicity="0..1" />
+    <End Role="Table_Employees" Type="Self.Table_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_Account">
+        <PropertyRef Name="ID_Account" />
+      </Principal>
+      <Dependent Role="Table_Employees">
+        <PropertyRef Name="ID_Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_Employees_Table_Position">
+    <End Role="Table_Position" Type="Self.Table_Position" Multiplicity="1" />
+    <End Role="Table_Employees" Type="Self.Table_Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_Position">
+        <PropertyRef Name="ID_Position" />
+      </Principal>
+      <Dependent Role="Table_Employees">
+        <PropertyRef Name="ID_Position" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_InspectionActs_Table_AlarmTriggers">
+    <End Role="Table_AlarmTriggers" Type="Self.Table_AlarmTriggers" Multiplicity="0..1" />
+    <End Role="Table_InspectionActs" Type="Self.Table_InspectionActs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_AlarmTriggers">
+        <PropertyRef Name="ID_AlarmTriggers" />
+      </Principal>
+      <Dependent Role="Table_InspectionActs">
+        <PropertyRef Name="ID_AlarmTriggers" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_InspectionActs_Table_Employees">
+    <End Role="Table_Employees" Type="Self.Table_Employees" Multiplicity="1" />
+    <End Role="Table_InspectionActs" Type="Self.Table_InspectionActs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_Employees">
+        <PropertyRef Name="ID_Employees" />
+      </Principal>
+      <Dependent Role="Table_InspectionActs">
+        <PropertyRef Name="ID_Inspector_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_InspectionActs_Table_SecurityObjects">
+    <End Role="Table_SecurityObjects" Type="Self.Table_SecurityObjects" Multiplicity="1" />
+    <End Role="Table_InspectionActs" Type="Self.Table_InspectionActs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_SecurityObjects">
+        <PropertyRef Name="ID_SecurityObjects" />
+      </Principal>
+      <Dependent Role="Table_InspectionActs">
+        <PropertyRef Name="ID_SecurityObjects" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_ResponsiblePersons_Table_Clients">
+    <End Role="Table_Clients" Type="Self.Table_Clients" Multiplicity="0..1" />
+    <End Role="Table_ResponsiblePersons" Type="Self.Table_ResponsiblePersons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_Clients">
+        <PropertyRef Name="ID_Clients" />
+      </Principal>
+      <Dependent Role="Table_ResponsiblePersons">
+        <PropertyRef Name="ID_Clients" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_SecurityContracts_Table_Clients">
+    <End Role="Table_Clients" Type="Self.Table_Clients" Multiplicity="1" />
+    <End Role="Table_SecurityContracts" Type="Self.Table_SecurityContracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_Clients">
+        <PropertyRef Name="ID_Clients" />
+      </Principal>
+      <Dependent Role="Table_SecurityContracts">
+        <PropertyRef Name="ID_Clients" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_SecurityContracts_Table_Employees">
+    <End Role="Table_Employees" Type="Self.Table_Employees" Multiplicity="1" />
+    <End Role="Table_SecurityContracts" Type="Self.Table_SecurityContracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_Employees">
+        <PropertyRef Name="ID_Employees" />
+      </Principal>
+      <Dependent Role="Table_SecurityContracts">
+        <PropertyRef Name="ID_Responsible_Employee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_SecurityContracts_Table_SecurityObjects">
+    <End Role="Table_SecurityObjects" Type="Self.Table_SecurityObjects" Multiplicity="1" />
+    <End Role="Table_SecurityContracts" Type="Self.Table_SecurityContracts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_SecurityObjects">
+        <PropertyRef Name="ID_SecurityObjects" />
+      </Principal>
+      <Dependent Role="Table_SecurityContracts">
+        <PropertyRef Name="ID_SecurityObjects" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_SecurityObjects_Table_Clients">
+    <End Role="Table_Clients" Type="Self.Table_Clients" Multiplicity="1" />
+    <End Role="Table_SecurityObjects" Type="Self.Table_SecurityObjects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_Clients">
+        <PropertyRef Name="ID_Clients" />
+      </Principal>
+      <Dependent Role="Table_SecurityObjects">
+        <PropertyRef Name="ID_Clients" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_SecurityObjects_Table_IMGRoomPlan">
+    <End Role="Table_IMGRoomPlan" Type="Self.Table_IMGRoomPlan" Multiplicity="1" />
+    <End Role="Table_SecurityObjects" Type="Self.Table_SecurityObjects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_IMGRoomPlan">
+        <PropertyRef Name="ID_IMG_Room_Plan" />
+      </Principal>
+      <Dependent Role="Table_SecurityObjects">
+        <PropertyRef Name="ID_IMG_Room_Plan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_Sensors_Table_SecurityObjects">
+    <End Role="Table_SecurityObjects" Type="Self.Table_SecurityObjects" Multiplicity="1" />
+    <End Role="Table_Sensors" Type="Self.Table_Sensors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_SecurityObjects">
+        <PropertyRef Name="ID_SecurityObjects" />
+      </Principal>
+      <Dependent Role="Table_Sensors">
+        <PropertyRef Name="ID_SecurityObjects" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Table_Sensors_Table_SensorsType">
+    <End Role="Table_SensorsType" Type="Self.Table_SensorsType" Multiplicity="1" />
+    <End Role="Table_Sensors" Type="Self.Table_Sensors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Table_SensorsType">
+        <PropertyRef Name="ID_SensorsType" />
+      </Principal>
+      <Dependent Role="Table_Sensors">
+        <PropertyRef Name="ID_SensorsType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище DepartmentOfPrivateSecurityModelContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_Account" EntityType="Self.Table_Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_AlarmTriggers" EntityType="Self.Table_AlarmTriggers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_Clients" EntityType="Self.Table_Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_EmployeeAssignments" EntityType="Self.Table_EmployeeAssignments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_Employees" EntityType="Self.Table_Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_IMGRoomPlan" EntityType="Self.Table_IMGRoomPlan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_InspectionActs" EntityType="Self.Table_InspectionActs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_Position" EntityType="Self.Table_Position" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_ResponsiblePersons" EntityType="Self.Table_ResponsiblePersons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_SecurityContracts" EntityType="Self.Table_SecurityContracts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_SecurityObjects" EntityType="Self.Table_SecurityObjects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_Sensors" EntityType="Self.Table_Sensors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_SensorsType" EntityType="Self.Table_SensorsType" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Table_Account_Table_Position" Association="Self.FK_Table_Account_Table_Position">
+      <End Role="Table_Position" EntitySet="Table_Position" />
+      <End Role="Table_Account" EntitySet="Table_Account" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_AlarmTriggers_Table_Sensors" Association="Self.FK_Table_AlarmTriggers_Table_Sensors">
+      <End Role="Table_Sensors" EntitySet="Table_Sensors" />
+      <End Role="Table_AlarmTriggers" EntitySet="Table_AlarmTriggers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_EmployeeAssignments_Table_AlarmTriggers" Association="Self.FK_Table_EmployeeAssignments_Table_AlarmTriggers">
+      <End Role="Table_AlarmTriggers" EntitySet="Table_AlarmTriggers" />
+      <End Role="Table_EmployeeAssignments" EntitySet="Table_EmployeeAssignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_EmployeeAssignments_Table_Employees" Association="Self.FK_Table_EmployeeAssignments_Table_Employees">
+      <End Role="Table_Employees" EntitySet="Table_Employees" />
+      <End Role="Table_EmployeeAssignments" EntitySet="Table_EmployeeAssignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_Employees_Table_Account" Association="Self.FK_Table_Employees_Table_Account">
+      <End Role="Table_Account" EntitySet="Table_Account" />
+      <End Role="Table_Employees" EntitySet="Table_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_Employees_Table_Position" Association="Self.FK_Table_Employees_Table_Position">
+      <End Role="Table_Position" EntitySet="Table_Position" />
+      <End Role="Table_Employees" EntitySet="Table_Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_InspectionActs_Table_AlarmTriggers" Association="Self.FK_Table_InspectionActs_Table_AlarmTriggers">
+      <End Role="Table_AlarmTriggers" EntitySet="Table_AlarmTriggers" />
+      <End Role="Table_InspectionActs" EntitySet="Table_InspectionActs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_InspectionActs_Table_Employees" Association="Self.FK_Table_InspectionActs_Table_Employees">
+      <End Role="Table_Employees" EntitySet="Table_Employees" />
+      <End Role="Table_InspectionActs" EntitySet="Table_InspectionActs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_InspectionActs_Table_SecurityObjects" Association="Self.FK_Table_InspectionActs_Table_SecurityObjects">
+      <End Role="Table_SecurityObjects" EntitySet="Table_SecurityObjects" />
+      <End Role="Table_InspectionActs" EntitySet="Table_InspectionActs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_ResponsiblePersons_Table_Clients" Association="Self.FK_Table_ResponsiblePersons_Table_Clients">
+      <End Role="Table_Clients" EntitySet="Table_Clients" />
+      <End Role="Table_ResponsiblePersons" EntitySet="Table_ResponsiblePersons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_SecurityContracts_Table_Clients" Association="Self.FK_Table_SecurityContracts_Table_Clients">
+      <End Role="Table_Clients" EntitySet="Table_Clients" />
+      <End Role="Table_SecurityContracts" EntitySet="Table_SecurityContracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_SecurityContracts_Table_Employees" Association="Self.FK_Table_SecurityContracts_Table_Employees">
+      <End Role="Table_Employees" EntitySet="Table_Employees" />
+      <End Role="Table_SecurityContracts" EntitySet="Table_SecurityContracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_SecurityContracts_Table_SecurityObjects" Association="Self.FK_Table_SecurityContracts_Table_SecurityObjects">
+      <End Role="Table_SecurityObjects" EntitySet="Table_SecurityObjects" />
+      <End Role="Table_SecurityContracts" EntitySet="Table_SecurityContracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_SecurityObjects_Table_Clients" Association="Self.FK_Table_SecurityObjects_Table_Clients">
+      <End Role="Table_Clients" EntitySet="Table_Clients" />
+      <End Role="Table_SecurityObjects" EntitySet="Table_SecurityObjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_SecurityObjects_Table_IMGRoomPlan" Association="Self.FK_Table_SecurityObjects_Table_IMGRoomPlan">
+      <End Role="Table_IMGRoomPlan" EntitySet="Table_IMGRoomPlan" />
+      <End Role="Table_SecurityObjects" EntitySet="Table_SecurityObjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_Sensors_Table_SecurityObjects" Association="Self.FK_Table_Sensors_Table_SecurityObjects">
+      <End Role="Table_SecurityObjects" EntitySet="Table_SecurityObjects" />
+      <End Role="Table_Sensors" EntitySet="Table_Sensors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Table_Sensors_Table_SensorsType" Association="Self.FK_Table_Sensors_Table_SensorsType">
+      <End Role="Table_SensorsType" EntitySet="Table_SensorsType" />
+      <End Role="Table_Sensors" EntitySet="Table_Sensors" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

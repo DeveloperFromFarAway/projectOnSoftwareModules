@@ -1,0 +1,6 @@
+C:\Users\PC\Desktop\Програмные модули\TimeCheckLibrary\bin\Debug\TimeCheckLibrary.dll
+C:\Users\PC\Desktop\Програмные модули\TimeCheckLibrary\bin\Debug\TimeCheckLibrary.pdb
+C:\Users\PC\Desktop\Програмные модули\TimeCheckLibrary\obj\Debug\TimeCheckLibrary.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\Програмные модули\TimeCheckLibrary\obj\Debug\TimeCheckLibrary.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Програмные модули\TimeCheckLibrary\obj\Debug\TimeCheckLibrary.dll
+C:\Users\PC\Desktop\Програмные модули\TimeCheckLibrary\obj\Debug\TimeCheckLibrary.pdb

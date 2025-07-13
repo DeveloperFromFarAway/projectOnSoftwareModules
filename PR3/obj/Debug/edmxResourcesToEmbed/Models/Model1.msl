@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище DepartmentOfPrivateSecurityModelContainer" CdmEntityContainer="DOPSEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_Account">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_Account">
+        <MappingFragment StoreEntitySet="Table_Account">
+          <ScalarProperty Name="ID_Account" ColumnName="ID_Account" />
+          <ScalarProperty Name="ID_Position" ColumnName="ID_Position" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Permission" ColumnName="Permission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_AlarmTriggers">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_AlarmTriggers">
+        <MappingFragment StoreEntitySet="Table_AlarmTriggers">
+          <ScalarProperty Name="ID_AlarmTriggers" ColumnName="ID_AlarmTriggers" />
+          <ScalarProperty Name="ID_InspectionActs" ColumnName="ID_InspectionActs" />
+          <ScalarProperty Name="ID_Sensors" ColumnName="ID_Sensors" />
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="IsFalsealarm" ColumnName="IsFalsealarm" />
+          <ScalarProperty Name="Responsetime" ColumnName="Responsetime" />
+          <ScalarProperty Name="PatrolArrivalTime" ColumnName="PatrolArrivalTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_Clients">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_Clients">
+        <MappingFragment StoreEntitySet="Table_Clients">
+          <ScalarProperty Name="ID_Clients" ColumnName="ID_Clients" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContactInfo" ColumnName="ContactInfo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="Contractcount" ColumnName="Contractcount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_EmployeeAssignments">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_EmployeeAssignments">
+        <MappingFragment StoreEntitySet="Table_EmployeeAssignments">
+          <ScalarProperty Name="ID_EmployeeAssignments" ColumnName="ID_EmployeeAssignments" />
+          <ScalarProperty Name="ID_Employees" ColumnName="ID_Employees" />
+          <ScalarProperty Name="ID_AlarmTriggers" ColumnName="ID_AlarmTriggers" />
+          <ScalarProperty Name="Taskstatus" ColumnName="Taskstatus" />
+          <ScalarProperty Name="Feedback" ColumnName="Feedback" />
+          <ScalarProperty Name="IsResolved" ColumnName="IsResolved" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_Employees">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_Employees">
+        <MappingFragment StoreEntitySet="Table_Employees">
+          <ScalarProperty Name="AdditionalTerms" ColumnName="AdditionalTerms" />
+          <ScalarProperty Name="TaxExemption" ColumnName="TaxExemption" />
+          <ScalarProperty Name="SNILS" ColumnName="SNILS" />
+          <ScalarProperty Name="INN" ColumnName="INN" />
+          <ScalarProperty Name="PassportData" ColumnName="PassportData" />
+          <ScalarProperty Name="ContractNumber" ColumnName="ContractNumber" />
+          <ScalarProperty Name="ProbationPeriod" ColumnName="ProbationPeriod" />
+          <ScalarProperty Name="WorkAddress" ColumnName="WorkAddress" />
+          <ScalarProperty Name="ID_Employees" ColumnName="ID_Employees" />
+          <ScalarProperty Name="ID_Position" ColumnName="ID_Position" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ContactInfo" ColumnName="ContactInfo" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="Isonduty" ColumnName="Isonduty" />
+          <ScalarProperty Name="PatrolledObjectsCount" ColumnName="PatrolledObjectsCount" />
+          <ScalarProperty Name="ID_Account" ColumnName="ID_Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_IMGRoomPlan">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_IMGRoomPlan">
+        <MappingFragment StoreEntitySet="Table_IMGRoomPlan">
+          <ScalarProperty Name="ID_IMG_Room_Plan" ColumnName="ID_IMG_Room_Plan" />
+          <ScalarProperty Name="image_code" ColumnName="image_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_InspectionActs">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_InspectionActs">
+        <MappingFragment StoreEntitySet="Table_InspectionActs">
+          <ScalarProperty Name="ID_InspectionActs" ColumnName="ID_InspectionActs" />
+          <ScalarProperty Name="ID_AlarmTriggers" ColumnName="ID_AlarmTriggers" />
+          <ScalarProperty Name="ID_SecurityObjects" ColumnName="ID_SecurityObjects" />
+          <ScalarProperty Name="ID_Inspector_Employee" ColumnName="ID_Inspector_Employee" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Findings" ColumnName="Findings" />
+          <ScalarProperty Name="Inspectionresult" ColumnName="Inspectionresult" />
+          <ScalarProperty Name="iscriminalcaseinitiated" ColumnName="iscriminalcaseinitiated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_Position">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_Position">
+        <MappingFragment StoreEntitySet="Table_Position">
+          <ScalarProperty Name="ID_Position" ColumnName="ID_Position" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_ResponsiblePersons">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_ResponsiblePersons">
+        <MappingFragment StoreEntitySet="Table_ResponsiblePersons">
+          <ScalarProperty Name="ID_ResponsiblePersons" ColumnName="ID_ResponsiblePersons" />
+          <ScalarProperty Name="ID_Clients" ColumnName="ID_Clients" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_SecurityContracts">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_SecurityContracts">
+        <MappingFragment StoreEntitySet="Table_SecurityContracts">
+          <ScalarProperty Name="ID_SecurityContracts" ColumnName="ID_SecurityContracts" />
+          <ScalarProperty Name="ID_SecurityObjects" ColumnName="ID_SecurityObjects" />
+          <ScalarProperty Name="ID_Clients" ColumnName="ID_Clients" />
+          <ScalarProperty Name="ID_Responsible_Employee" ColumnName="ID_Responsible_Employee" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Terms" ColumnName="Terms" />
+          <ScalarProperty Name="Contractstatus" ColumnName="Contractstatus" />
+          <ScalarProperty Name="fee" ColumnName="fee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_SecurityObjects">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_SecurityObjects">
+        <MappingFragment StoreEntitySet="Table_SecurityObjects">
+          <ScalarProperty Name="ID_SecurityObjects" ColumnName="ID_SecurityObjects" />
+          <ScalarProperty Name="ID_Clients" ColumnName="ID_Clients" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ID_IMG_Room_Plan" ColumnName="ID_IMG_Room_Plan" />
+          <ScalarProperty Name="ResponsiblePersons" ColumnName="ResponsiblePersons" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_Sensors">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_Sensors">
+        <MappingFragment StoreEntitySet="Table_Sensors">
+          <ScalarProperty Name="ID_Sensors" ColumnName="ID_Sensors" />
+          <ScalarProperty Name="ID_SecurityObjects" ColumnName="ID_SecurityObjects" />
+          <ScalarProperty Name="ID_SensorsType" ColumnName="ID_SensorsType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="InstallationDate" ColumnName="InstallationDate" />
+          <ScalarProperty Name="LastMaintenance" ColumnName="LastMaintenance" />
+          <ScalarProperty Name="IsFunctional" ColumnName="IsFunctional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Table_SensorsType">
+      <EntityTypeMapping TypeName="DepartmentOfPrivateSecurityModel.Table_SensorsType">
+        <MappingFragment StoreEntitySet="Table_SensorsType">
+          <ScalarProperty Name="ID_SensorsType" ColumnName="ID_SensorsType" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
